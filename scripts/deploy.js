@@ -6,7 +6,11 @@ async function main() {
 
   // Deploy test token for local testing
   const TestToken = await hre.ethers.getContractFactory("TestToken");
-  const testToken = await TestToken.deploy("Test Token", "TEST", hre.ethers.parseEther("1000000")); // 1M tokens
+  const testToken = await TestToken.deploy(
+    "TradingFlow Token ONLY_TEST_USE",
+    "TF",
+    hre.ethers.parseEther("1000000")
+  ); // 1M tokens
   await testToken.waitForDeployment();
   console.log(`TestToken deployed to: ${testToken.target}`);
 

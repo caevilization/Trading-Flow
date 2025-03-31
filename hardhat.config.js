@@ -1,5 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
-const { testPrivKey } = require("./secrets.json");
+require("@nomicfoundation/hardhat-verify");
+const { testPrivKey, bscscanApiKey } = require("./secrets.json");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -39,5 +40,10 @@ module.exports = {
   },
   mocha: {
     timeout: 40000,
+  },
+  etherscan: {
+    apiKey: {
+      bscTestnet: bscscanApiKey
+    },
   },
 };

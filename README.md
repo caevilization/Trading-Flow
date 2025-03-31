@@ -19,6 +19,7 @@ TradingFlow is a decentralized investment platform built on the Binance Smart Ch
 ## Technical Stack
 
 - **Smart Contract Development**:
+
   - Solidity v0.8.28
   - OpenZeppelin Contracts v5.0.1
   - Hardhat Development Framework
@@ -40,17 +41,20 @@ npm >= 9.0.0
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/caevilization/Trading-Flow.git
 cd Trading-Flow
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Create `secrets.json` for deployment keys
+
 ```json
 {
   "privateKey": "your_private_key_here"
@@ -87,11 +91,13 @@ npm run deploy:mainnet
 The main investment contract with the following key components:
 
 - **Investment Management**
+
   - Track individual investments
   - Maintain total fund value
   - Handle multiple investments per user
 
 - **Withdrawal System**
+
   - Time-locked withdrawal requests
   - Owner-approved processing
   - Security checks and validations
@@ -130,3 +136,15 @@ Project Link: [https://github.com/caevilization/Trading-Flow](https://github.com
 - [OpenZeppelin](https://www.openzeppelin.com/) for secure smart contract components
 - [Hardhat](https://hardhat.org/) for the development framework
 - [Binance Smart Chain](https://www.bnbchain.org/) for the blockchain platform
+
+## To verify contract
+
+```bash
+# 验证 TestToken 合约
+npx hardhat verify --network bscTestnet <TestToken合约地址> "TradingFlow Token ONLY_TEST_USE" "TF" "1000000000000000000000000"
+
+# 验证 FlowFund 合约
+npx hardhat verify --network bscTestnet <FlowFund合约地址> <TestToken合约地址> <Carry Fee接收地址>
+```
+
+注意：确保在命令中使用引号包裹包含空格的参数。

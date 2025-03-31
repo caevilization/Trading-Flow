@@ -1,0 +1,48 @@
+/* TradingFlow Tabs Styles */
+.tf-tabs {
+  @apply h-full flex flex-col;
+}
+
+.tf-tabs .ant-tabs-nav {
+  @apply m-0 bg-tf-base-bg1 border-b border-tf-base-bg2;
+}
+
+.tf-tabs .ant-tabs-nav::before {
+  @apply border-0;
+}
+
+.tf-tabs .ant-tabs-nav .ant-tabs-nav-wrap {
+  @apply px-2;
+}
+
+.tf-tabs .ant-tabs-tab {
+  @apply py-2 px-4 m-0;
+}
+
+.tf-tabs .ant-tabs-tab + .ant-tabs-tab {
+  @apply ml-2;
+}
+
+.tf-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  @apply text-tf-base-subtext/50 text-sm font-medium transition-colors;
+}
+
+.tf-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
+  @apply text-tf-base-subtext;
+}
+
+.tf-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  @apply text-tf-accent-violet;
+}
+
+.tf-tabs .ant-tabs-ink-bar {
+  @apply bg-tf-accent-violet;
+}
+
+.tf-tabs .ant-tabs-content-holder {
+  @apply flex-1 overflow-hidden;
+}
+
+.tf-tabs .ant-tabs-content {
+  @apply h-full;
+}
